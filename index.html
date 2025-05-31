@@ -27,18 +27,55 @@
 		<!-- INTERACTIVE WIDGETS -->
 		<div class="item horizontal-container">
 			<div class="item">
-				<!-- Your widget 1 code goes here. -->
-				<!-- Widget 1 title -->
-				<!-- Widget 1 element -->
+				<h3>Time Range Selection</h3>
+				<div class="widget-content">
+					<label for="startYear">Start Year:</label>
+					<select id="startYear">
+						<option value="1995">1995</option>
+						<option value="2000">2000</option>
+						<option value="2005">2005</option>
+						<option value="2010">2010</option>
+					</select>
+
+					<label for="endYear">End Year:</label>
+					<select id="endYear">
+						<option value="2005">2005</option>
+						<option value="2010">2010</option>
+						<option value="2015">2015</option>
+						<option value="2016" selected>2016</option>
+					</select>
+				</div>
 			</div>
 
-			<!-- DELETE THE FOLLOWING DIV IF YOU ONLY HAVE 1 WIDGET. -->
 			<div class="item">
-				<!-- Your widget 2 code goes here. -->
-				<!-- Widget 2 title -->
-				<!-- Widget 2 element -->
+				<h3>Country Selection</h3>
+				<div class="widget-content">
+					<div
+						style="
+							max-height: 200px;
+							overflow-y: auto;
+							border: 1px solid #eee;
+							padding: 5px;
+							border-radius: 4px;
+						"
+						class="checkbox-group"
+						id="countryFilters"
+					>
+						<!-- Checkboxes will be dynamically populated -->
+					</div>
+					<div style="margin-top: 8px">
+						<button id="selectAllCountries" type="button">Select All</button>
+						<button id="clearAllCountries" type="button">Clear All</button>
+					</div>
+				</div>
 			</div>
 		</div>
+		<!-- Add a container for the country legend -->
+		<div
+			class="item"
+			id="countryLegendContainer"
+			style="display: none; margin-bottom: 0"
+		></div>
 
 		<!-- CHART(S) -->
 		<div class="item chart-container">
